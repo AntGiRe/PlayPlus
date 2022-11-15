@@ -15,3 +15,5 @@ At the moment as noteworthy things:
 - Any user can add series and movies
 - It has an intuitive interface, in my opinion
 - And the colors are cool :D
+
+[![Video about PlayPlus](https://img.youtube.com/vi/okPXYuJHSi8/0.jpg)](https://youtu.be/okPXYuJHSi8)
