@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="600.0" style="-fx-background-color: #0f1121;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Config">
+   <children>
+      <TextField fx:id="imagen" layoutX="310.0" layoutY="136.0" prefHeight="25.0" prefWidth="230.0" promptText=".../iert456.png" style="-fx-background-color: #191c36; -fx-border-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-text-fill: white;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="56.0" layoutY="140.0" text="Enlace a imagen" textFill="#d7d7d7">
+         <font>
+            <Font name="Ebrima Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="70.0" text="Cambio de Imagen" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="417.0" prefHeight="28.0" prefWidth="256.0" text="Proximamente mas configuraciones" textFill="#d7d7d7">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_default" layoutX="228.0" layoutY="259.0" mnemonicParsing="false" onAction="#defaultImg" prefHeight="36.0" prefWidth="145.0" style="-fx-background-color: none; -fx-border-color: white; -fx-text-fill: white; -fx-border-radius: 10px;" text="Default">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="save" layoutX="208.0" layoutY="211.0" mnemonicParsing="false" onAction="#newImage" prefHeight="37.0" prefWidth="184.0" style="-fx-background-color: #5815ea; -fx-border-color: white; -fx-text-fill: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Guardar">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="600.0" style="-fx-background-color: #0f1121;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutY="95.0" prefHeight="429.0" prefWidth="600.0" style="-fx-background-color: #0f1121;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="427.0" prefWidth="598.0">
+               <children>
+                  <VBox fx:id="generos" prefHeight="429.0" prefWidth="600.0" style="-fx-background-color: #0f1121;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="40.0" layoutY="13.0" text="Elige un genero" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="titulo" layoutX="40.0" layoutY="47.0" prefHeight="34.0" prefWidth="538.0" text="TITULO" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

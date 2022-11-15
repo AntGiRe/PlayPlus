@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #0f1121;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FilmWindow">
+   <top>
+      <ToolBar prefHeight="76.0" prefWidth="1080.0" style="-fx-background-color: #0c0e1a;" BorderPane.alignment="CENTER">
+         <items>
+            <Circle fx:id="circulo" fill="#0c0e1a" onMouseClicked="#OpenConfig" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label text="Bienvenido" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="22.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="nickname" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button graphicTextGap="8.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="169.0" style="-fx-background-color: none; -fx-text-fill: white;" text="Inicio">
+               <font>
+                  <Font name="Ebrima" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="8.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="169.0" style="-fx-background-color: none; -fx-text-fill: white;" text="Busqueda">
+               <font>
+                  <Font name="Ebrima" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../lupa.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="169.0" style="-fx-background-color: none; -fx-text-fill: white;" text="Series">
+               <font>
+                  <Font name="Ebrima" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../tv.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="169.0" style="-fx-background-color: none; -fx-text-fill: white;" text="Peliculas">
+               <font>
+                  <Font name="Ebrima" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pop.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#addContent" prefHeight="69.0" prefWidth="151.0" style="-fx-background-color: none; -fx-text-fill: white;" text="Upload" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../upload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Ebrima Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="4.0" />
+               </padding>
+            </Button>
+         </items>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ToolBar>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="59.0" prefWidth="1080.0">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="104.0" onMouseClicked="#volver" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../flecha.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="name" text="null" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="43.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="3.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="380.0" prefWidth="1085.0">
+               <children>
+                  <ImageView fx:id="image" fitHeight="381.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../no-image.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="315.0" prefWidth="772.0">
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                     <children>
+                        <FlowPane prefHeight="71.0" prefWidth="772.0">
+                           <children>
+                              <Label fx:id="description" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="772.0" text="Description" textFill="WHITE" textOverrun="CLIP">
+                                 <font>
+                                    <Font name="Ebrima" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </FlowPane>
+                        <HBox prefHeight="38.0" prefWidth="772.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label text="Productora" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="productora" text="ProductoraNombre" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" text="Puntua esta pelicula:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fx:id="star1" fitHeight="56.0" fitWidth="56.0" onMouseClicked="#star1" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../star_out.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="star2" fitHeight="56.0" fitWidth="56.0" onMouseClicked="#star2" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../star_out.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="star3" fitHeight="56.0" fitWidth="56.0" onMouseClicked="#star3" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../star_out.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="star4" fitHeight="56.0" fitWidth="56.0" onMouseClicked="#star4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../star_out.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="star5" fitHeight="56.0" fitWidth="56.0" onMouseClicked="#star5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../star_out.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="29.0" prefWidth="772.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="La puntuación global de la pelicula es de:" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="85.0" prefWidth="772.0">
+                           <children>
+                              <Label fx:id="puntuacion" text="Puntuacion" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="772.0">
+                                 <children>
+                                    <Label text="Número de usuarios que han votado:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ebrima" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="numeroUsers" text="Numero" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ebrima" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="772.0">
+                           <children>
+                              <Button fx:id="visto" mnemonicParsing="false" onAction="#onVisto" prefHeight="36.0" prefWidth="216.0" style="-fx-background-color: #5815ea; -fx-border-color: white; -fx-text-fill: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Marcar como visto">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="visto1" mnemonicParsing="false" prefHeight="36.0" prefWidth="216.0" style="-fx-background-color: #1a25ea; -fx-border-color: white; -fx-text-fill: white; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Añadir generos">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="106.0" prefWidth="1085.0">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="1065.0">
+                     <children>
+                        <Label text="Año:" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="anyo" text="anyo" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="28.0" prefWidth="1087.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Duración:" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="duracion" text="duracion" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="minutos" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="26.0" prefWidth="1087.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Dirección:" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="director" text="directorNombre" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="26.0" prefWidth="1087.0">
+                     <children>
+                        <Label text="Generos:" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="generos" text="generos" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
